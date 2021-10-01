@@ -15,7 +15,6 @@ export {
 } from './modules/toasts';
 
 export { AbstractAvatar } from './components/AbstractAvatar';
-export { AppLogo } from './components/AppLogo';
 export { Button } from './components/Button';
 export { Card } from './components/Card';
 export { CoinIcon } from './components/CoinIcon';
@@ -27,8 +26,6 @@ export { Loading } from './components/Loading';
 export { Modal } from './components/Modal';
 export { QRCode } from './components/QRCode';
 export { QRCodeButton } from './components/QRCodeButton';
-export { SwapProgress } from './components/SwapProgress';
-export { SwapStatusIcon } from './components/SwapStatusIcon';
 export { Text } from './components/Text';
 export { TextInput } from './components/TextInput';
 export { Tooltip } from './components/Tooltip';

@@ -17,7 +17,7 @@ export const Default = () => (
       <CopyToClipboard
         size={size}
         key={size}
-        left={<Icon.Swingby />}
+        left={<Icon.Ledger />}
         value={`A ${size}-sized CopyToClipboard component`}
         data-testid={`copy-${size}`}
       />
@@ -32,7 +32,7 @@ export const Accent = () => (
         variant="accent"
         size={size}
         key={size}
-        left={<Icon.Swingby />}
+        left={<Icon.Ledger />}
         value={`A ${size}-sized CopyToClipboard component`}
         data-testid={`copy-${size}`}
       />
