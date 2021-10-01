@@ -26,8 +26,7 @@ export const CometLight = {
       },
 
       primary: {
-        // normal: '#31d5b8',
-        normal: '#34D399',
+        normal: '#31d5b8',
         active: '#21a68e',
         text: '#fff',
       },
