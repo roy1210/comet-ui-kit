@@ -1,5 +1,5 @@
 export { CometTheme, CometThemeProvider, CometThemeType } from './modules/themes';
-export { PULSAR_GLOBAL_FONT_HREF, CometGlobalStyles } from './modules/global';
+export { COMET_GLOBAL_FONT_HREF, CometGlobalStyles } from './modules/global';
 export { logos, getCoinLogo } from './modules/logos';
 export { getCryptoAssetFormatter, getFiatAssetFormatter } from './modules/intl';
 export { useMatchMedia } from './modules/match-media';
