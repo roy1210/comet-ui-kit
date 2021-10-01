@@ -5,7 +5,8 @@ export const CometLight = {
 
     color: {
       bg: {
-        normal: '#fff',
+        // normal: '#fff',
+        normal: '#f4f5f7',
         accent: '#ecf2f8',
         masked: '#fafeff',
         hover: '#fbfbfb',
@@ -25,7 +26,8 @@ export const CometLight = {
       },
 
       primary: {
-        normal: '#31d5b8',
+        // normal: '#31d5b8',
+        normal: '#34D399',
         active: '#21a68e',
         text: '#fff',
       },

@@ -16,6 +16,8 @@ module.exports = {
     'import/named': ['off'],
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/no-anonymous-default-export': ['off'],
+    '@typescript-eslint/no-unused-vars': ['off'],
+    '@typescript-eslint/no-unused-expressions': ['off'],
     'import/no-internal-modules': [
       'error',
       {
