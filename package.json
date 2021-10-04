@@ -1,6 +1,6 @@
 {
   "name": "comet-ui-kit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "module": "dist/comet-ui-kit.esm.js",
   "main": "dist/index.js",
@@ -18,7 +18,8 @@
   "scripts": {
     "dev": "start-storybook -p 6006",
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build && build-storybook -c .storybook -o public",
+    "storybook": "start-storybook",
     "test": "tsdx test --passWithNoTests",
     "lint": "yarn format && eslint . --fix",
     "size": "size-limit",
