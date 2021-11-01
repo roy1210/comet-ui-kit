@@ -9,6 +9,7 @@ import { Styled, ContentContainer, Content, Left, Right, Fixed } from './styled'
 export type Props = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'as'> &
   Testable & {
     selected?: boolean;
+    selectedColor?: string;
     interactive?: boolean;
     left?: React.ReactNode;
     right?: React.ReactNode;
@@ -18,6 +19,7 @@ export type Props = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'as'> &
 export const Component = ({
   htmlTag,
   selected = false,
+  selectedColor = '',
   interactive = true,
   children,
   disabled,
@@ -46,7 +48,7 @@ export const Component = ({
         <Fixed>
           <Icon.Tick
             fontSize={theme.comet.size.drawer}
-            color={theme.comet.color.primary.normal}
+            color={selectedColor ? selectedColor : theme.comet.color.primary.normal}
             data-testid={buildTestId('tick')}
           />
         </Fixed>

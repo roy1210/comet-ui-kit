@@ -7,19 +7,29 @@ import { StyledDefaultTarget, Container, IconContainer, Variant, Size, Space } f
 
 export const DefaultTarget = ({
   variant = 'transparent',
+  color = '',
   ...props
 }: React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
   variant?: Variant;
   size: Size;
+  color?: string;
 }) => {
   const { isShowing } = useContext(Context);
 
   return (
-    <StyledDefaultTarget {...props} variant={variant} isShowing={isShowing} as="button">
+    <StyledDefaultTarget
+      {...props}
+      variant={variant}
+      isShowing={isShowing}
+      color={color}
+      as="button"
+    >
       <Container>{props.children}</Container>
       {variant === 'input' && <Space />}
-      <IconContainer>{isShowing ? <Icon.CaretUp /> : <Icon.CaretDown />}</IconContainer>
+      <IconContainer color={color}>
+        {isShowing ? <Icon.CaretUp /> : <Icon.CaretDown />}
+      </IconContainer>
     </StyledDefaultTarget>
   );
 };

@@ -8,8 +8,9 @@ import { TargetContainer, TooltipContent } from './styled';
 
 export type TriggerValue = 'mouseenter' | 'focus' | 'click';
 
-export type Props = Pick<React.HTMLAttributes<HTMLElement>, 'className' | 'children'> &
-  Testable & {
+export type Props = Pick<React.HTMLAttributes<HTMLElement>, 'className' | 'children'> & {
+  color?: string;
+} & Testable & {
     target: React.ReactNode;
   };
 
@@ -17,6 +18,7 @@ export const Component = ({
   children,
   className,
   target,
+  color = '',
   'data-testid': testId,
   ...otherProps
 }: Props) => {

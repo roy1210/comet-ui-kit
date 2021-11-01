@@ -19,14 +19,21 @@ export const Bare = () => {
 export const WithHelpers = () => {
   const content = (
     <>
-      <Dropdown.Item onClick={action('click-item-1')}>Item 1</Dropdown.Item>
+      <Dropdown.Item color="#FF8A16" onClick={action('click-item-1')}>
+        Item 1
+      </Dropdown.Item>
       <Dropdown.Item htmlTag="a" onClick={action('click-item-2')}>
         Item 2
       </Dropdown.Item>
       <Dropdown.Divider />
       <Dropdown.Item onClick={action('click-item-3')}>Item 3</Dropdown.Item>
       <Dropdown.Divider />
-      <Dropdown.Item selected onClick={action('click-item-4')}>
+      <Dropdown.Item
+        color="#FF8A16"
+        selected
+        selectedColor="#FF8A16"
+        onClick={action('click-item-4')}
+      >
         Selected item
       </Dropdown.Item>
       <Dropdown.Item disabled onClick={action('click-item-5')}>
@@ -55,8 +62,8 @@ export const WithHelpers = () => {
       </Dropdown>
       <Dropdown
         target={
-          <Dropdown.DefaultTarget variant="input" size="country">
-            Click here!
+          <Dropdown.DefaultTarget variant="input" size="country" color="#FF8A16">
+            Click here! (Orange)
           </Dropdown.DefaultTarget>
         }
         data-testid="dropdown-input2"

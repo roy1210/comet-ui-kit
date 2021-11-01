@@ -3,11 +3,15 @@ import { em } from 'polished';
 
 import { ListItem } from '../../ListItem';
 
-const interactive = css`
+interface Color {
+  color?: string;
+}
+
+const interactive = css<Color>`
   :hover,
   :active {
     ${ListItem.Content} {
-      color: ${({ theme }) => theme.comet.color.primary.normal};
+      color: ${(props) => (props.color ? props.color : props.theme.comet.color.primary.normal)};
     }
   }
 `;

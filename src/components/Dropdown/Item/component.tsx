@@ -12,6 +12,7 @@ export const Component = ({
   children,
   'data-testid': testId,
   interactive = true,
+  color = '',
   onClick,
   ...otherProps
 }: Props) => {
@@ -37,6 +38,7 @@ export const Component = ({
       {...otherProps}
       interactive={interactive}
       onClick={click}
+      color={color}
       data-testid={buildTestId(testId ?? '')}
     >
       {children}
