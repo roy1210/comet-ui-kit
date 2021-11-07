@@ -25,6 +25,7 @@ const Common = (props: Partial<React.ComponentPropsWithoutRef<typeof TextInput>>
           placeholder="Some placeholder…"
           data-testid={`input-${size}`}
           placeholderColor="silver"
+          borderActiveColor="orange"
         />
       ))}
     </Container>
