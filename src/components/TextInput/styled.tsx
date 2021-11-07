@@ -69,7 +69,7 @@ export const InputContainer = styled.div<{
   align-items: center;
   justify-content: space-between;
   background: ${({ theme }) => theme.comet.components.input.idle.bg};
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   color: ${({ theme }) => theme.comet.color.text.accent};
   overflow: hidden;
   font-size: ${({ theme }) => em(theme.comet.size.house)};
