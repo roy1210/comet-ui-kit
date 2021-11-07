@@ -27,6 +27,7 @@ export type Props = Omit<
     left?: React.ReactNode;
     right?: React.ReactNode;
     size: Size;
+    placeholderColor?: string;
   };
 
 export const Component = ({
@@ -41,6 +42,7 @@ export const Component = ({
   right,
   size,
   id: idProp,
+  placeholderColor = '',
   ...props
 }: Props) => {
   const { buildTestId } = useBuildTestId({ id: testId });
@@ -78,6 +80,7 @@ export const Component = ({
           id={id}
           onFocus={focus}
           onBlur={blur}
+          placeholderColor={placeholderColor}
         />
         {right && <Right data-testid={buildTestId('right')}>{right}</Right>}
       </InputContainer>

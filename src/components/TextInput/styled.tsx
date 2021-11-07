@@ -81,7 +81,7 @@ export const InputContainer = styled.div<{ size: Size; state: State; isFocused: 
   ${({ isFocused }) => isFocused && focused};
 `;
 
-export const Input = styled.input`
+export const Input = styled.input<{ placeholderColor?: string }>`
   flex: 1;
   display: flex;
   margin: 0;
@@ -101,7 +101,8 @@ export const Input = styled.input`
   ${({ theme }) => transitions(['color'], `${theme.comet.duration.normal} ease-in-out`)};
 
   ::placeholder {
-    color: ${({ theme }) => theme.comet.color.text.placeholder};
+    color: ${(props) =>
+      props.placeholderColor ? props.placeholderColor : props.theme.comet.color.text.placeholder};
   }
 `;
 

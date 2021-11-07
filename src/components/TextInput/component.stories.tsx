@@ -24,6 +24,7 @@ const Common = (props: Partial<React.ComponentPropsWithoutRef<typeof TextInput>>
           onChange={(evt) => setValue(evt.target.value)}
           placeholder="Some placeholder…"
           data-testid={`input-${size}`}
+          placeholderColor="silver"
         />
       ))}
     </Container>
