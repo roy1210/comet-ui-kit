@@ -58,17 +58,10 @@ const focused = css<{ borderActiveColor: string }>`
     props.borderActiveColor ? props.borderActiveColor : props.theme.comet.color.primary.active};
 `;
 
-const withShadow = css`
-  border: 1px solid #dadada;
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-`;
-
 export const InputContainer = styled.div<{
   size: Size;
   state: State;
   isFocused: boolean;
-  isShadow: boolean;
   borderActiveColor: string;
 }>`
   display: flex;
@@ -92,7 +85,6 @@ export const InputContainer = styled.div<{
   ${({ state }) => state === 'danger' && danger};
 
   ${({ isFocused }) => isFocused && focused};
-  ${({ isShadow }) => isShadow && withShadow};
 `;
 
 export const Input = styled.input<{ placeholderColor?: string }>`
@@ -113,6 +105,9 @@ export const Input = styled.input<{ placeholderColor?: string }>`
   font-weight: 700;
   min-width: 0;
   ${({ theme }) => transitions(['color'], `${theme.comet.duration.normal} ease-in-out`)};
+
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
 
   ::placeholder {
     color: ${(props) =>

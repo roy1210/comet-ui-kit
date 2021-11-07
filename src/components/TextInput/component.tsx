@@ -28,7 +28,6 @@ export type Props = Omit<
     right?: React.ReactNode;
     size: Size;
     placeholderColor?: string;
-    isShadow?: boolean;
     borderActiveColor?: string;
   };
 
@@ -46,7 +45,6 @@ export const Component = ({
   id: idProp,
   placeholderColor = '',
   borderActiveColor = '',
-  isShadow = false,
   ...props
 }: Props) => {
   const { buildTestId } = useBuildTestId({ id: testId });
@@ -80,7 +78,6 @@ export const Component = ({
         isFocused={isFocused}
         state={state}
         size={size}
-        isShadow={isShadow}
         borderActiveColor={borderActiveColor}
       >
         {left && <Left data-testid={buildTestId('left')}>{left}</Left>}
