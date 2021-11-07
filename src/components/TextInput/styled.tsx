@@ -73,6 +73,8 @@ export const InputContainer = styled.div<{
   color: ${({ theme }) => theme.comet.color.text.accent};
   overflow: hidden;
   font-size: ${({ theme }) => em(theme.comet.size.house)};
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
 
   ${({ theme }) =>
     transitions(['color', 'background', 'border'], `${theme.comet.duration.normal} ease-in-out`)};
@@ -105,9 +107,6 @@ export const Input = styled.input<{ placeholderColor?: string }>`
   font-weight: 700;
   min-width: 0;
   ${({ theme }) => transitions(['color'], `${theme.comet.duration.normal} ease-in-out`)};
-
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
 
   ::placeholder {
     color: ${(props) =>
